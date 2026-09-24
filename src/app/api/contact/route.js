@@ -6,6 +6,7 @@ const DEFAULT_TO_EMAIL = 'ahmed@daxow.com';
 const TOPIC_LABELS = {
   demo: 'Demo request',
   audit: 'Free AI audit',
+  website: 'AI Website Development — call request',
   sales: 'Sales inquiry',
   careers: 'Careers',
   other: 'General inquiry',
@@ -43,12 +44,15 @@ export async function POST(request) {
     phone: clean(body.phone, 50),
     company: clean(body.company, 200),
     companySize: clean(body.companySize, 50),
-    topic: TOPIC_LABELS[body.topic] ? body.topic : 'demo',
+    topic: Object.hasOwn(TOPIC_LABELS, body.topic) ? body.topic : 'demo',
     message: clean(body.message, 5000),
   };
 
   if (!lead.firstName || !lead.email || !lead.message) {
     return NextResponse.json({ error: 'Please fill in your name, email and message.' }, { status: 400 });
+  }
+  if (lead.topic === 'website' && !lead.phone) {
+    return NextResponse.json({ error: 'Please add a phone number so we can call you.' }, { status: 400 });
   }
   if (!EMAIL_RE.test(lead.email)) {
     return NextResponse.json({ error: 'Please enter a valid email address.' }, { status: 400 });

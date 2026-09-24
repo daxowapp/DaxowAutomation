@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-09-24] - V4.3 AI Website Development Service
+### Added
+- New `/ai-website-development` service page: hero with "Request a Call", stats strip, 8 AI marketing content features (copy, visuals, video, SEO/AEO, chat assistant, multilingual, speed, analytics), 4-step process, "what's included" list and call-booking panel with a click-to-call number.
+- `AIWebsiteTeaser.jsx` homepage section promoting the new service.
+- "AI Websites" in the navbar (desktop + mobile) and "AI Website Development" in the footer.
+- Contact form topic "AI website development (request a call)": phone becomes required, the button reads "Request a Call", and the lead email is labelled as a call request.
+
+### Changed
+- Hero buttons stack full-width on phones.
+
 ## [2026-09-24] - V4.2 Production-Ready CTAs & Contact Form
 ### Fixed
 - Hero buttons ("View Analytics", "Explore Platform") now scroll to the metrics and platform sections on the homepage.

@@ -9,6 +9,7 @@ const FALLBACK_EMAIL = 'ahmed@daxow.com';
 const TOPICS = [
   { value: 'demo', label: 'Request a demo' },
   { value: 'audit', label: 'Free AI architecture audit' },
+  { value: 'website', label: 'AI website development (request a call)' },
   { value: 'sales', label: 'Talk to sales' },
   { value: 'careers', label: 'Careers' },
   { value: 'other', label: 'Something else' },
@@ -54,6 +55,8 @@ export default function ContactForm() {
       setForm((f) => ({ ...f, topic }));
     }
   }, []);
+
+  const callRequested = form.topic === 'website';
 
   const update = (e) => setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
 
@@ -119,8 +122,8 @@ export default function ContactForm() {
         <input id="email" name="email" type="email" placeholder="john@company.com" autoComplete="email" required value={form.email} onChange={update} />
       </div>
       <div className="form-field">
-        <label htmlFor="phone">Phone Number</label>
-        <input id="phone" name="phone" type="tel" placeholder="+90 5XX XXX XXXX" autoComplete="tel" value={form.phone} onChange={update} />
+        <label htmlFor="phone">Phone Number{callRequested ? ' *' : ''}</label>
+        <input id="phone" name="phone" type="tel" placeholder="+90 5XX XXX XXXX" autoComplete="tel" required={callRequested} value={form.phone} onChange={update} />
       </div>
       <div className="form-field">
         <label htmlFor="company">Company / University</label>
@@ -137,7 +140,7 @@ export default function ContactForm() {
       </div>
       <div className="form-field">
         <label htmlFor="message">How can we help? *</label>
-        <textarea id="message" name="message" rows="4" placeholder="Tell us about the workflows you want to automate..." required value={form.message} onChange={update}></textarea>
+        <textarea id="message" name="message" rows="4" placeholder={callRequested ? 'Tell us about your business and the website you want to build...' : 'Tell us about the workflows you want to automate...'} required value={form.message} onChange={update}></textarea>
       </div>
 
       {/* Honeypot field for bots */}
@@ -174,7 +177,7 @@ export default function ContactForm() {
         {status === 'sending' ? (
           <>Sending <Loader2 size={20} className="spin" /></>
         ) : (
-          <>Send Request <Send size={18} /></>
+          <>{callRequested ? 'Request a Call' : 'Send Request'} <Send size={18} /></>
         )}
       </motion.button>
     </form>

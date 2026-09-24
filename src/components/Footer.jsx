@@ -29,6 +29,7 @@ export default function Footer() {
               <li><Link href="/universities">Student Support AI</Link></li>
               <li><Link href="/enterprise">Enterprise Automation</Link></li>
               <li><Link href="/enterprise">Logistics AI</Link></li>
+              <li><Link href="/ai-website-development">AI Website Development</Link></li>
             </ul>
           </div>
           

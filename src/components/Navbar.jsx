@@ -11,6 +11,7 @@ const NAV_ITEMS = [
   { href: '/', label: 'Home' },
   { href: '/enterprise', label: 'Enterprise' },
   { href: '/universities', label: 'Universities' },
+  { href: '/ai-website-development', label: 'AI Websites' },
   { href: '/case-studies', label: 'Case Studies' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },

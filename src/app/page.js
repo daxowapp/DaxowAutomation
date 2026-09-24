@@ -4,6 +4,7 @@ import Integrations from '@/components/Integrations';
 import ValueProposition from '@/components/ValueProposition';
 import AutomationDeepDive from '@/components/AutomationDeepDive';
 import UniversityFocus from '@/components/UniversityFocus';
+import AIWebsiteTeaser from '@/components/AIWebsiteTeaser';
 import MetricsDashboard from '@/components/MetricsDashboard';
 import CaseStudies from '@/components/CaseStudies';
 import FAQ from '@/components/FAQ';
@@ -19,6 +20,7 @@ export default function Home() {
       <AutomationDeepDive />
       <ValueProposition />
       <UniversityFocus />
+      <AIWebsiteTeaser />
       <MetricsDashboard />
       <FAQ />
       <CallToAction />
