@@ -1,11 +1,11 @@
 "use client";
 
 import Link from 'next/link';
-import { Globe, Mail } from 'lucide-react';
+import { MapPin, Mail, Phone } from 'lucide-react';
 
 export default function Footer() {
   return (
-    <footer className="footer" id="contact">
+    <footer className="footer" id="footer">
       <div className="container">
         <div className="footer-content">
           <div>
@@ -16,8 +16,9 @@ export default function Footer() {
               Pioneering the future of automated operations for universities and enterprises globally.
             </p>
             <div style={{ display: 'flex', gap: '1rem', marginTop: '2rem' }}>
-              <a href="#" style={{ color: 'var(--text-secondary)' }}><Globe size={20} /></a>
-              <a href="#" style={{ color: 'var(--text-secondary)' }}><Mail size={20} /></a>
+              <a href="https://www.google.com/maps/search/?api=1&query=Mall+of+Istanbul+Ba%C5%9Fak%C5%9Fehir+Istanbul" target="_blank" rel="noopener noreferrer" aria-label="Office location on Google Maps" style={{ color: 'var(--text-secondary)' }}><MapPin size={20} /></a>
+              <a href="mailto:support@daxow.com" aria-label="Email Daxow" style={{ color: 'var(--text-secondary)' }}><Mail size={20} /></a>
+              <a href="tel:+905492006060" aria-label="Call Daxow" style={{ color: 'var(--text-secondary)' }}><Phone size={20} /></a>
             </div>
           </div>
           
@@ -36,7 +37,7 @@ export default function Footer() {
             <ul className="footer-links">
               <li><Link href="/about">About Us</Link></li>
               <li><Link href="/case-studies">Case Studies</Link></li>
-              <li><Link href="/about">Careers</Link></li>
+              <li><Link href="/contact?topic=careers#contact-form">Careers</Link></li>
               <li><Link href="/contact">Contact</Link></li>
             </ul>
           </div>

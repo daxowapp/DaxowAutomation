@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-09-24] - V4.2 Production-Ready CTAs & Contact Form
+### Fixed
+- Hero buttons ("View Analytics", "Explore Platform") now scroll to the metrics and platform sections on the homepage.
+- "Schedule Free Audit" and "Contact Sales" CTAs (home, enterprise, universities) now link to the contact form with the matching topic pre-selected.
+- Contact form now actually submits: required-field validation, loading/success/error states, spam honeypot, and a mailto fallback to ahmed@daxow.com if email delivery fails.
+- Mobile navigation: hamburger button was permanently hidden and white-on-white; it now shows on small screens and opens a working menu.
+- Footer social icons no longer point to `#` (now Google Maps, email and phone). "Careers" link goes to the contact form.
+- Contact page phone numbers and email are now clickable (`tel:` / `mailto:`), with a "Get directions" link to the office.
+- Contact page stacks to a single column on mobile.
+
+### Added
+- `/api/contact` route that emails leads to `ahmed@daxow.com` (configurable via `CONTACT_TO_EMAIL`) through Resend (`RESEND_API_KEY`). See `.env.example`.
+- `ContactForm.jsx` component.
+
 ## [2026-06-03] - V4.1 Real Contact Data & Improved Animations
 ### Changed
 - Completely redesigned `AutomationDeepDive.jsx` from a flashing chaos animation to a polished vertical timeline with scroll-triggered reveals.

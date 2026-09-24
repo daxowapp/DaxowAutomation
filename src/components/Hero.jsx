@@ -1,5 +1,6 @@
 "use client";
 
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, BarChart3, Bot, Zap } from 'lucide-react';
 
@@ -54,12 +55,12 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
           >
-            <button className="btn-primary">
+            <Link href="#analytics" className="btn-primary">
               View Analytics <BarChart3 size={18} />
-            </button>
-            <button className="btn-secondary">
+            </Link>
+            <Link href="#platform" className="btn-secondary">
               Explore Platform <Bot size={18} />
-            </button>
+            </Link>
           </motion.div>
         </div>
       </div>

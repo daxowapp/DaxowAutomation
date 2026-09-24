@@ -2,6 +2,7 @@
 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import ContactForm from '@/components/ContactForm';
 import { motion } from 'framer-motion';
 import { Mail, MapPin, Phone, Clock, MessageCircle, Globe } from 'lucide-react';
 
@@ -23,57 +24,20 @@ export default function ContactPage() {
 
       <section className="section" style={{ background: 'white' }}>
         <div className="container">
-          <div className="content-grid" style={{ gridTemplateColumns: '1fr 1fr' }}>
+          <div className="content-grid contact-grid">
             
             {/* Contact Form */}
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
+              id="contact-form"
+              className="contact-form-panel"
               style={{ background: 'var(--bg-secondary)', padding: '3rem', borderRadius: '24px', border: '1px solid var(--glass-border)' }}
             >
               <h2 style={{ marginBottom: '0.5rem' }}>Contact Sales</h2>
               <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem' }}>Fill out the form and our team will get back to you within 24 hours.</p>
-              <form style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                  <div>
-                    <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500 }}>First Name</label>
-                    <input type="text" placeholder="John" style={{ width: '100%', padding: '1rem', borderRadius: '8px', border: '1px solid var(--glass-border)', background: 'white', outline: 'none', fontSize: '1rem' }} />
-                  </div>
-                  <div>
-                    <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500 }}>Last Name</label>
-                    <input type="text" placeholder="Doe" style={{ width: '100%', padding: '1rem', borderRadius: '8px', border: '1px solid var(--glass-border)', background: 'white', outline: 'none', fontSize: '1rem' }} />
-                  </div>
-                </div>
-                <div>
-                  <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500 }}>Work Email</label>
-                  <input type="email" placeholder="john@company.com" style={{ width: '100%', padding: '1rem', borderRadius: '8px', border: '1px solid var(--glass-border)', background: 'white', outline: 'none', fontSize: '1rem' }} />
-                </div>
-                <div>
-                  <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500 }}>Phone Number</label>
-                  <input type="tel" placeholder="+90 5XX XXX XXXX" style={{ width: '100%', padding: '1rem', borderRadius: '8px', border: '1px solid var(--glass-border)', background: 'white', outline: 'none', fontSize: '1rem' }} />
-                </div>
-                <div>
-                  <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500 }}>Company / University</label>
-                  <input type="text" placeholder="Your organization name" style={{ width: '100%', padding: '1rem', borderRadius: '8px', border: '1px solid var(--glass-border)', background: 'white', outline: 'none', fontSize: '1rem' }} />
-                </div>
-                <div>
-                  <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500 }}>Company Size</label>
-                  <select style={{ width: '100%', padding: '1rem', borderRadius: '8px', border: '1px solid var(--glass-border)', background: 'white', outline: 'none', fontSize: '1rem' }}>
-                    <option>1-50 employees</option>
-                    <option>51-200 employees</option>
-                    <option>201-1000 employees</option>
-                    <option>1000+ employees</option>
-                  </select>
-                </div>
-                <div>
-                  <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: 500 }}>How can we help?</label>
-                  <textarea rows="4" placeholder="Tell us about the workflows you want to automate..." style={{ width: '100%', padding: '1rem', borderRadius: '8px', border: '1px solid var(--glass-border)', background: 'white', outline: 'none', resize: 'vertical', fontSize: '1rem' }}></textarea>
-                </div>
-                <button type="button" className="btn-primary" style={{ padding: '1rem', fontSize: '1.125rem', width: '100%', border: 'none', cursor: 'pointer' }}>
-                  Request Demo
-                </button>
-              </form>
+              <ContactForm />
             </motion.div>
 
             {/* Contact Info */}
@@ -95,10 +59,18 @@ export default function ContactPage() {
                     Mall of İstanbul Floor:14 Office:116<br/>
                     34490 Başakşehir/İstanbul
                   </p>
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=Mall+of+Istanbul+Ba%C5%9Fak%C5%9Fehir+Istanbul"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ display: 'inline-block', marginTop: '1rem', color: 'var(--accent-blue)', fontWeight: 600 }}
+                  >
+                    Get directions →
+                  </a>
                 </div>
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1.25rem', background: 'var(--bg-secondary)', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
+                  <a href="tel:+905492006060" className="contact-card">
                     <div style={{ width: '48px', height: '48px', background: 'var(--gradient-glow)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       <Phone size={22} color="var(--accent-blue)" />
                     </div>
@@ -106,9 +78,9 @@ export default function ContactPage() {
                       <div style={{ fontWeight: 600, marginBottom: '0.25rem' }}>Phone</div>
                       <div style={{ color: 'var(--text-secondary)' }}>+90 549 200 6060</div>
                     </div>
-                  </div>
+                  </a>
 
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1.25rem', background: 'var(--bg-secondary)', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
+                  <a href="tel:+905453081000" className="contact-card">
                     <div style={{ width: '48px', height: '48px', background: 'var(--gradient-glow)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       <Phone size={22} color="var(--accent-blue)" />
                     </div>
@@ -116,9 +88,9 @@ export default function ContactPage() {
                       <div style={{ fontWeight: 600, marginBottom: '0.25rem' }}>Phone 2</div>
                       <div style={{ color: 'var(--text-secondary)' }}>+90 545 308 1000</div>
                     </div>
-                  </div>
+                  </a>
 
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1.25rem', background: 'var(--bg-secondary)', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
+                  <a href="mailto:support@daxow.com" className="contact-card">
                     <div style={{ width: '48px', height: '48px', background: 'var(--gradient-glow)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       <Mail size={22} color="var(--accent-blue)" />
                     </div>
@@ -126,9 +98,9 @@ export default function ContactPage() {
                       <div style={{ fontWeight: 600, marginBottom: '0.25rem' }}>Email</div>
                       <div style={{ color: 'var(--text-secondary)' }}>support@daxow.com</div>
                     </div>
-                  </div>
+                  </a>
 
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1.25rem', background: 'var(--bg-secondary)', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
+                  <div className="contact-card">
                     <div style={{ width: '48px', height: '48px', background: 'var(--gradient-glow)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       <Clock size={22} color="var(--accent-blue)" />
                     </div>
@@ -138,7 +110,7 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', padding: '1.25rem', background: 'var(--bg-secondary)', borderRadius: '12px', border: '1px solid var(--glass-border)' }}>
+                  <div className="contact-card">
                     <div style={{ width: '48px', height: '48px', background: 'var(--gradient-glow)', borderRadius: '12px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                       <Globe size={22} color="var(--accent-blue)" />
                     </div>

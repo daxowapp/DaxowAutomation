@@ -12,7 +12,7 @@ const metrics = [
 
 export default function MetricsDashboard() {
   return (
-    <section className="section" style={{ background: 'var(--bg-secondary)', overflow: 'hidden' }}>
+    <section className="section" id="analytics" style={{ background: 'var(--bg-secondary)', overflow: 'hidden' }}>
       <div className="container">
         <div className="grid-2">
           <div>
