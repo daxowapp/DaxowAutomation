@@ -65,7 +65,7 @@ const steps = [
 
 export default function AutomationDeepDive() {
   return (
-    <section className="section" style={{ background: 'var(--bg-secondary)', overflow: 'hidden' }}>
+    <section className="section" id="platform" style={{ background: 'var(--bg-secondary)', overflow: 'hidden' }}>
       <div className="container">
         <div className="section-title">
           <h2>How <span className="gradient-text">Intelligent Automation</span> Works</h2>

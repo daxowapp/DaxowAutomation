@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-09-24] - V4.3 AI Website Development Service
+### Added
+- New `/ai-website-development` service page: hero with "Request a Call", stats strip, 8 AI marketing content features (copy, visuals, video, SEO/AEO, chat assistant, multilingual, speed, analytics), 4-step process, "what's included" list and call-booking panel with a click-to-call number.
+- `AIWebsiteTeaser.jsx` homepage section promoting the new service.
+- "AI Websites" in the navbar (desktop + mobile) and "AI Website Development" in the footer.
+- Contact form topic "AI website development (request a call)": phone becomes required, the button reads "Request a Call", and the lead email is labelled as a call request.
+
+### Changed
+- Hero buttons stack full-width on phones.
+
+## [2026-09-24] - V4.2 Production-Ready CTAs & Contact Form
+### Fixed
+- Hero buttons ("View Analytics", "Explore Platform") now scroll to the metrics and platform sections on the homepage.
+- "Schedule Free Audit" and "Contact Sales" CTAs (home, enterprise, universities) now link to the contact form with the matching topic pre-selected.
+- Contact form now actually submits: required-field validation, loading/success/error states, spam honeypot, and a mailto fallback to ahmed@daxow.com if email delivery fails.
+- Mobile navigation: hamburger button was permanently hidden and white-on-white; it now shows on small screens and opens a working menu.
+- Footer social icons no longer point to `#` (now Google Maps, email and phone). "Careers" link goes to the contact form.
+- Contact page phone numbers and email are now clickable (`tel:` / `mailto:`), with a "Get directions" link to the office.
+- Contact page stacks to a single column on mobile.
+
+### Added
+- `/api/contact` route that emails leads to `ahmed@daxow.com` (configurable via `CONTACT_TO_EMAIL`) through Resend (`RESEND_API_KEY`). See `.env.example`.
+- `ContactForm.jsx` component.
+
 ## [2026-06-03] - V4.1 Real Contact Data & Improved Animations
 ### Changed
 - Completely redesigned `AutomationDeepDive.jsx` from a flashing chaos animation to a polished vertical timeline with scroll-triggered reveals.

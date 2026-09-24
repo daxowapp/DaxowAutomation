@@ -1,5 +1,6 @@
 "use client";
 
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 
@@ -34,12 +35,12 @@ export default function CallToAction() {
               Stop wasting human potential on robotic tasks. Schedule a free AI architecture audit and discover exactly how much time and money Daxow can save you.
             </p>
             <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <button className="btn-primary" style={{ padding: '16px 32px', fontSize: '1.125rem' }}>
+              <Link href="/contact?topic=audit#contact-form" className="btn-primary" style={{ padding: '16px 32px', fontSize: '1.125rem' }}>
                 Schedule Free Audit <ArrowRight size={20} />
-              </button>
-              <button className="btn-secondary" style={{ padding: '16px 32px', fontSize: '1.125rem' }}>
+              </Link>
+              <Link href="/contact?topic=sales#contact-form" className="btn-secondary" style={{ padding: '16px 32px', fontSize: '1.125rem' }}>
                 Contact Sales
-              </button>
+              </Link>
             </div>
           </div>
         </div>
