@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-10-27] - Fawaly coming soon and Arabic font
+### Changed
+- Fawaly is now presented as coming soon to the Mac App Store: download buttons and links are replaced with "Coming soon" badges on the product, engine, support and privacy pages, and `/fawaly/download` and `/fawaly/engine/download` redirect to `/fawaly`.
+
+### Fixed
+- Arabic text on the Fawaly pages uses IBM Plex Sans Arabic (via `next/font`) with no letter-spacing. Bold Arabic headings, eyebrows and buttons previously fell back to system fonts and could render as empty boxes.
+
 ## [2026-10-27] - Fawaly product and App Store support
 ### Added
 - Bilingual `/fawaly` native Mac product page with actual labelled Demo imagery, bounded delegation explanation, free-app/provider-cost disclosure and accessible reduced-motion reveals.

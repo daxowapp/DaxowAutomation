@@ -1,3 +1,4 @@
-export function GET() {
-  return Response.redirect('https://github.com/daxowapp/DaxowAutomation/releases/download/fawaly-v0.3.5/Fawaly-0.3.5-macOS.zip', 302);
+// Downloads are paused until the Mac App Store release; old links land on the product page.
+export function GET(request) {
+  return Response.redirect(new URL('/fawaly', request.url), 302);
 }
