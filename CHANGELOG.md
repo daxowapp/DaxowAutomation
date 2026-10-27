@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-10-27] - Fawaly product and App Store support
+### Added
+- Bilingual `/fawaly` native Mac product page with actual labelled Demo imagery, bounded delegation explanation, free-app/provider-cost disclosure and accessible reduced-motion reveals.
+- `/fawaly/support`, `/fawaly/engine` and `/fawaly/privacy`: contextual setup, separate Store-engine installation, third-party AI sharing, support and data-retention choices.
+- Explicit direct/engine download redirect routes to versioned signed release assets. No App Store availability or unmeasured savings claim.
+- Footer product link; original app icon/crew artwork and no analytics/ad scripts.
+
+### Verification
+- Production build and browser checks, public release/download and deployed-route acceptance recorded in the accompanying PR/release handoff.
+
 ## [2026-09-24] - V4.3 AI Website Development Service
 ### Added
 - New `/ai-website-development` service page: hero with "Request a Call", stats strip, 8 AI marketing content features (copy, visuals, video, SEO/AEO, chat assistant, multilingual, speed, analytics), 4-step process, "what's included" list and call-booking panel with a click-to-call number.

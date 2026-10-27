@@ -30,6 +30,7 @@ export default function Footer() {
               <li><Link href="/enterprise">Enterprise Automation</Link></li>
               <li><Link href="/enterprise">Logistics AI</Link></li>
               <li><Link href="/ai-website-development">AI Website Development</Link></li>
+              <li><Link href="/fawaly">Fawaly — Mac AI assistants</Link></li>
             </ul>
           </div>
           
