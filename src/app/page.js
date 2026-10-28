@@ -5,6 +5,7 @@ import ValueProposition from '@/components/ValueProposition';
 import AutomationDeepDive from '@/components/AutomationDeepDive';
 import UniversityFocus from '@/components/UniversityFocus';
 import AIWebsiteTeaser from '@/components/AIWebsiteTeaser';
+import FawalyTeaser from '@/components/FawalyTeaser';
 import MetricsDashboard from '@/components/MetricsDashboard';
 import CaseStudies from '@/components/CaseStudies';
 import FAQ from '@/components/FAQ';
@@ -21,6 +22,7 @@ export default function Home() {
       <ValueProposition />
       <UniversityFocus />
       <AIWebsiteTeaser />
+      <FawalyTeaser />
       <MetricsDashboard />
       <FAQ />
       <CallToAction />

@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-10-28] - Fawaly product tour and current setup
+### Added
+- A Fawaly product section on the Daxow homepage linking to the tour.
+- English/Arabic product-page switcher, user-supplied 47-second showcase with original audio/video streams, a poster, opt-in playback, error fallback and a written walkthrough.
+- Clear primary-agent/assistant responsibilities, ordered available-team routing, four-card setup, a real-task verification guide and FAQs for costs, permissions, background work and privacy.
+- Credit to Ahmed Nagdy for the original project idea and name, with links to his site and delegate-skills project.
+
+### Changed
+- Setup/support/engine guidance now describes one visible Fawaly app and an internal execution component instead of asking users to open another engine app.
+- Guided MiniMax and other assistant connection guidance, explicit coding-plan/API distinctions, and MiniMax-first priority instructions.
+- Preserved Mac App Store coming-soon status, Windows/Linux upcoming status, existing download redirects and no guaranteed savings claim. Privacy page documents the self-hosted player.
+
+### Verification
+- See `docs/fawaly-site-refresh.md` for media provenance and the local/public verification record.
+
 ## [2026-10-27] - Fawaly coming soon and Arabic font
 ### Changed
 - Fawaly is now presented as coming soon to the Mac App Store: download buttons and links are replaced with "Coming soon" badges on the product, engine, support and privacy pages, and `/fawaly/download` and `/fawaly/engine/download` redirect to `/fawaly`.
