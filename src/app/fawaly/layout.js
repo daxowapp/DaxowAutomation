@@ -16,9 +16,9 @@ export default function FawalyLayout({ children }) {
   return <div className={`fawaly-site ${arabic.variable}`}>
     <a className="fw-skip" href="#fawaly-main">Skip to content</a>
     <header className="fw-nav"><Link href="/fawaly" className="fw-brand"><img src="/fawaly-assets/Fawaly-1024.png" width="42" height="42" alt="" />Fawaly <span>by Daxow</span></Link>
-      <nav aria-label="Fawaly"><Link href="/fawaly/support">Setup & support</Link><Link href="/fawaly/privacy">Privacy</Link><Link href="/">Daxow ↗</Link></nav>
+      <nav aria-label="Fawaly"><Link href="/fawaly#showcase">Watch the tour</Link><Link href="/fawaly/support">Setup & support</Link><Link href="/fawaly/privacy">Privacy</Link><Link href="/">Daxow ↗</Link></nav>
     </header>
     <main id="fawaly-main">{children}</main>
-    <footer className="fw-footer"><p>© 2026 Daxow Automation · Fawaly for macOS 14+ · Coming soon to the Mac App Store</p><div><Link href="/fawaly/support">Support</Link><Link href="/fawaly/privacy">Privacy</Link><a href="mailto:support@daxow.com?subject=Fawaly%20support">support@daxow.com</a></div><p>Independent software. Not affiliated with Anthropic, OpenAI or model providers.</p></footer>
+    <footer className="fw-footer"><p>© 2026 Daxow Automation · Fawaly for macOS 14+ · Coming soon to the Mac App Store</p><div><Link href="/fawaly/support">Support</Link><Link href="/fawaly/privacy">Privacy</Link><a href="mailto:support@daxow.com?subject=Fawaly%20support">support@daxow.com</a></div><p>Windows & Linux: upcoming. Original idea and name by <a href="https://nagdy.me/">Ahmed Nagdy</a>. Native Mac app developed by Daxow.</p><p>Independent software. Not affiliated with Anthropic, OpenAI or model providers.</p></footer>
   </div>;
 }

@@ -1,0 +1,13 @@
+.card{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;background:linear-gradient(135deg,#101823,#1b2538);border:1px solid #33435b;border-radius:24px;padding:48px;color:#f7f5ee}
+.card h2{color:#f7f5ee;font-size:clamp(2rem,3.3vw,3rem);line-height:1.15;margin-bottom:20px}
+.card h2 span{color:#fac23b}
+.card p{color:#c6cfdd;line-height:1.8}
+.card .eyebrow{font-size:.75rem;letter-spacing:.12em;color:#fac23b;font-weight:700;margin-bottom:18px}
+.card .soon{font-size:.85rem;color:#fac23b;margin:20px 0 16px}
+.link{display:inline-block;color:#fff;font-weight:700;border:1px solid #ffffff40;padding:12px 18px;border-radius:12px;line-height:1.6}
+.preview{display:block;border:1px solid #ffffff30;border-radius:16px;overflow:hidden;background:#0d131d;color:#fff}
+.preview img{width:100%;height:auto;display:block;aspect-ratio:16/9}
+.preview span{display:block;font-size:.85rem;padding:14px 18px}
+.card a:focus-visible{outline:3px solid #fac23b;outline-offset:5px}
+@media(max-width:900px){.card{grid-template-columns:1fr;padding:32px;gap:28px}}
+@media(max-width:540px){.card{padding:24px}.link{width:100%;text-align:center}.preview span{font-size:.75rem}}
