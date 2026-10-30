@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-10-31] - Fawaly 0.4.0 Advisor
+### Added
+- An English/Arabic Advisor section on the Fawaly page: a read-only second opinion for the primary agent, its three modes (Off, Only when I ask, Important decisions), bounded rounds and recorded decisions.
+- Claude Code and Codex on the user's own subscription in the supported-services list, with a note that they use a separate Fawaly sign-in and never the main session.
+
+### Unchanged
+- Mac App Store coming-soon status, download redirects, no guaranteed savings claim.
+
 ## [2026-10-28] - Fawaly product tour and current setup
 ### Added
 - A Fawaly product section on the Daxow homepage linking to the tour.
