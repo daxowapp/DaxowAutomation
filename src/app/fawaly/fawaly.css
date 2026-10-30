@@ -50,3 +50,5 @@
 .fw-landing [dir=ltr]{unicode-bidi:isolate}
 @media(max-width:900px){.fw-intro{grid-template-columns:1fr;gap:36px;padding-top:32px}.fw-new-hero{max-width:720px}.fw-routing{max-width:600px;width:100%;margin-inline:auto}.fw-proof{margin-block:0}.fw-team{padding-top:0}}
 @media(max-width:540px){.fw-language{padding-top:20px}.fw-new-hero h1{font-size:2.35rem}.fw-new-hero{padding-bottom:40px}.fw-chips{flex-direction:column;gap:8px}.fw-video-frame{border-radius:12px}.fw-showcase h2{font-size:1.9rem}.fw-routing{padding:16px}.fw-worker{padding:14px 12px;gap:10px}.fw-provider-list{gap:8px}.fw-provider-list li{padding:8px 12px}.fw-faq summary{font-size:1rem}.fw-credit-links{flex-direction:column}}
+.fw-advisor{padding-top:0}.fw-advisor>p:not(.fw-eyebrow){max-width:900px}.fw-advisor .fw-flow{grid-template-columns:repeat(3,1fr);margin-top:28px}
+@media(max-width:900px){.fw-advisor .fw-flow{grid-template-columns:1fr}}
