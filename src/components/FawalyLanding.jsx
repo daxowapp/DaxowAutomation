@@ -5,6 +5,13 @@ import Link from 'next/link';
 import FawalyReveal from './FawalyReveal';
 import FawalyVideo from './FawalyVideo';
 
+const desktopDownloads = [
+  ['windows-x64', 'Windows x64'], ['windows-arm64', 'Windows arm64'],
+  ['linux-deb-amd64', 'Ubuntu / Debian x64'], ['linux-deb-arm64', 'Ubuntu / Debian arm64'],
+  ['linux-rpm-x86_64', 'Fedora / RHEL x64'], ['linux-rpm-aarch64', 'Fedora / RHEL arm64'],
+  ['linux-appimage-x86_64', 'AppImage x64'], ['linux-appimage-aarch64', 'AppImage arm64'],
+];
+
 const copy = {
   en: {
     eyebrow: 'BY DAXOW · YOUR AI CODING CREW',
@@ -12,7 +19,8 @@ const copy = {
     lead: 'Keep working in Claude Code or Codex. Your lead agent plans and reviews, a second model can weigh in, and your interns handle the implementation you delegate.',
     download: 'Download for Mac', guide: 'See the four setup steps', watch: 'Watch the 47-second tour',
     availability: 'Free app · macOS 14+ · Apple Silicon & Intel · Provider plans may cost extra',
-    platforms: 'Sudo Interns (Fawaly) 0.7.0 · Notarized ZIP · 27 MB',
+    platforms: 'Sudo Interns (Fawaly) 0.7.1 · Notarized ZIP · 27 MB',
+    otherTitle: 'Windows and Linux preview', otherCopy: 'Version 0.7.0 · Free · The installers are unsigned, so Windows SmartScreen will warn you before it runs. Tested on virtual machines, not physical devices. No automatic updates yet.', otherAll: 'All packages, MSI and checksums',
     chips: ['One visible Mac app', 'Your order, models & permissions', 'Review before accepting work'],
     videoTitle: 'Meet your new crew.', videoCopy: 'A quick look at the app: connect assistants, choose their order and follow a task through execution and review.',
     videoNote: '47 seconds · with sound · English interface · illustrative product showcase, not proof of your connection or balance',
@@ -48,8 +56,9 @@ const copy = {
     arabicNameStory: 'In Egyptian Arabic, fawaly brings to mind the hands-on workers on a building site who do the heavy lifting. In our software workshop, that’s the crew that turns the lead agent’s plan into working code.',
     englishNameStory: 'Unix users know sudo as the command for running something with elevated privileges. Pair it with interns who get all the tickets and you have our joke. Their actual access is limited to the scope you approve.',
     credit: 'Thanks to Ahmed Nagdy for the original idea and Arabic name. Daxow built on his work to make the native Mac app.',
-    updatesEyebrow: 'VERSION 0.7.0 · PUBLIC MAC PREVIEW', updatesTitle: 'What’s new in the workshop?',
+    updatesEyebrow: 'VERSION 0.7.1 · PUBLIC MAC PREVIEW', updatesTitle: 'What’s new in the workshop?',
     updates: [
+      ['Your team comes first', 'Your lead agent now uses the team before it changes files. With the advisor set to Important, the first project task of a session waits for a consultation. If the advisor is busy or fails, the work carries on.'],
       ['Skills', 'Install curated skills and instruction templates for one project or all local projects. See what’s installed, who made it, and any potential overlaps before making changes.'],
       ['Developer Daily', 'Read developer news from the original sources, save stories, and turn a useful article into a practical brief for your crew.'],
       ['OpenRouter', 'Connect in the browser or use your own key, then search and pick a model. Usage follows your OpenRouter account.'],
@@ -65,7 +74,8 @@ const copy = {
     lead: 'كمّل شغلك في Claude Code أو Codex. الوكيل الرئيسي يخطّط ويراجع، والمستشار يدّي رأي تاني، والفواعلي يشيلوا التنفيذ اللي تفوّضه لهم.',
     download: 'حمّل الفواعلي للماك', guide: 'شوف خطوات البداية الأربع', watch: 'شوف الفكرة في ٤٧ ثانية',
     availability: 'التطبيق مجاني · macOS 14 أو أحدث · Apple Silicon وIntel · اشتراكات المساعدين قد تكون مدفوعة',
-    platforms: 'الفواعلي 0.7.0 · ملف ZIP موثّق من Apple · ٢٧ ميجابايت',
+    platforms: 'الفواعلي 0.7.1 · ملف ZIP موثّق من Apple · ٢٧ ميجابايت',
+    otherTitle: 'نسخة تجريبية لـ Windows وLinux', otherCopy: 'الإصدار 0.7.0 · مجانية · ملفات التثبيت مش موقّعة، فـ Windows SmartScreen هيحذّرك قبل التشغيل. اتجربت على أجهزة افتراضية مش أجهزة حقيقية. لسه مفيش تحديث تلقائي.', otherAll: 'كل الملفات وMSI وchecksums',
     chips: ['تطبيق واحد ظاهر على الماك', 'ترتيبك وموديلاتك وصلاحياتك', 'مراجعة الشغل قبل قبوله'],
     videoTitle: 'اتعرّف على فريقك الجديد.', videoCopy: 'جولة سريعة في التطبيق: ربط المساعدين، وترتيب الفريق، ومتابعة المهمة من التنفيذ لحد المراجعة.',
     videoNote: '٤٧ ثانية · بصوت · واجهة إنجليزية · عرض توضيحي للمنتج، مش إثبات اتصال حسابك أو رصيدك',
@@ -101,8 +111,9 @@ const copy = {
     arabicNameStory: 'في المصري، الفواعلي هم عمال الموقع اللي بيشيلوا الشغل التقيل في البناء. وفي ورشة الكود، دول المساعدين اللي بياخدوا خطة الوكيل الرئيسي ويحوّلوها لشغل على الأرض.',
     englishNameStory: 'الاسم الإنجليزي نكتة للمبرمجين. sudo أمر في يونكس لتشغيل أوامر بصلاحيات أعلى، وInterns يعني متدربين. تخيّل المتدربين اللي واخدين كل التذاكر، ومكافأتهم برومبت كمان. جوّه التطبيق، المساعدين ما بياخدوش صلاحيات مدير الجهاز.',
     credit: 'شكر لأحمد نجدي، صاحب الفكرة والاسم العربي. داكسو بنت على شغله وطوّرته لتطبيق ماك.',
-    updatesEyebrow: 'الإصدار 0.7.0 · النسخة التجريبية العامة للماك', updatesTitle: 'إيه الجديد في الورشة؟',
+    updatesEyebrow: 'الإصدار 0.7.1 · النسخة التجريبية العامة للماك', updatesTitle: 'إيه الجديد في الورشة؟',
     updates: [
+      ['الفريق الأول', 'الوكيل الأساسي بقى بيستخدم الفريق قبل ما يغيّر ملفات. ولو المستشار على وضع «مهم»، أول مهمة على المشروع في الجلسة بتستنى الاستشارة. ولو المستشار مشغول أو فشل، الشغل بيكمّل عادي.'],
       ['المهارات', 'ثبّت مهارات وقوالب تعليمات لمشروع واحد أو لكل مشاريعك المحلية. اعرف إيه المتسطّب ومين صاحب المهارة، وشوف أي تعارض محتمل قبل التثبيت.'],
       ['أخبار المطوّرين', 'اقرأ الأخبار من مصادرها الأصلية، واحفظ اللي يهمك، وجهّز من مقال مفيد طلب عملي تناقشه مع فريقك.'],
       ['OpenRouter', 'سجّل من المتصفح أو استخدم مفتاحك، وبعدها ابحث واختار الموديل. الاستخدام بيتحسب على حسابك في OpenRouter.'],
@@ -128,6 +139,7 @@ export default function FawalyLanding() {
       <p className="fw-eyebrow">{c.eyebrow}</p><h1>{c.title}</h1><p className="fw-tagline">{c.tagline}</p><p className="fw-lead">{c.lead}</p>
       <div className="fw-actions"><a className="fw-button" href="/fawaly/download">{c.download} ↓</a><a className="fw-outline" href="#showcase">{c.watch} ↓</a></div>
       <p className="fw-small">{c.availability}</p><p className="fw-small">{c.platforms}</p>
+      <div className="fw-desktop" id="windows-linux"><h2>{c.otherTitle}</h2><div className="fw-desktop-links">{desktopDownloads.map(([slug, label]) => <a key={slug} dir="ltr" href={`/fawaly/download/${slug}`}>{label} ↓</a>)}</div><p className="fw-small">{c.otherCopy}</p><a className="fw-desktop-all" href="https://github.com/daxowapp/fawaly/releases/tag/desktop-v0.7.0">{c.otherAll} ↗</a></div>
       <ul className="fw-chips">{c.chips.map(item => <li key={item}>{item}</li>)}</ul>
     </section>
     <section className="fw-showcase" id="showcase" aria-labelledby="showcase-title">
@@ -148,7 +160,7 @@ export default function FawalyLanding() {
     <section className="fw-wrap fw-section" id="whats-new" aria-labelledby="whats-new-title">
       <p className="fw-eyebrow">{c.updatesEyebrow}</p><h2 id="whats-new-title">{c.updatesTitle}</h2>
       <div className="fw-flow">{c.updates.map(([title, detail]) => <article key={title}><h3>{title}</h3><p>{detail}</p></article>)}</div>
-      <a className="fw-outline fw-after-cards" href="https://github.com/daxowapp/fawaly/releases/tag/v0.7.0">{c.releaseNotes} ↗</a>
+      <a className="fw-outline fw-after-cards" href="https://github.com/daxowapp/fawaly/releases/tag/v0.7.1">{c.releaseNotes} ↗</a>
     </section>
     <section className="fw-wrap fw-section"><p className="fw-eyebrow">{c.flowEyebrow}</p><h2>{c.flowTitle}</h2><div className="fw-flow">{c.flow.map(([title, text], i) => <FawalyReveal key={i}><article><span>0{i + 1}</span><h3>{title}</h3><p>{text}</p></article></FawalyReveal>)}</div></section>
     <section className="fw-wrap fw-section fw-team"><div className="fw-split"><div><p className="fw-eyebrow">{c.teamEyebrow}</p><h2 className="fw-lines">{c.teamTitle}</h2><p>{c.teamCopy}</p><p className="fw-small">{c.teamNote}</p></div><div className="fw-routing" role="group" aria-label={c.teamExample}><p className="fw-small">{c.teamExample}</p>{[c.busy, c.next, c.third].map((text, i) => <div className={`fw-worker ${i === 1 ? 'fw-worker-next' : ''}`} key={i}><span className="fw-worker-number">0{i + 1}</span><span>{text}</span><span aria-hidden="true">{['◷', '→', '·'][i]}</span></div>)}<img src="/fawaly-assets/crew-shift.png" width="1376" height="1143" alt="" loading="lazy" /></div></div></section>
