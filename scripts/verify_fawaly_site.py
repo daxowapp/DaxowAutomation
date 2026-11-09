@@ -63,13 +63,27 @@ def verify(base):
         print('PASS', path)
 
     downloads = {
-        '/fawaly/download': 'https://github.com/daxowapp/fawaly/releases/download/v0.7.0/Sudo-Interns-0.7.0.zip',
+        '/fawaly/download': 'https://github.com/daxowapp/fawaly/releases/download/v0.7.1/Sudo-Interns-0.7.1.zip',
         '/fawaly/engine/download': '/fawaly/download',
     }
     for path, target in downloads.items():
         status, headers, _ = get(path)
         assert status == 302 and headers.get('Location') == target, (path, status, headers.get('Location'))
         print('PASS', path, 'release redirect')
+
+    desktop = 'https://github.com/daxowapp/fawaly/releases/download/desktop-v0.7.0/Sudo-Interns-0.7.0-'
+    for slug, name in {
+        'windows-x64': 'windows-x64-setup.exe', 'windows-arm64': 'windows-arm64-setup.exe',
+        'linux-deb-amd64': 'linux-amd64.deb', 'linux-deb-arm64': 'linux-arm64.deb',
+        'linux-rpm-x86_64': 'linux-x86_64.rpm', 'linux-rpm-aarch64': 'linux-aarch64.rpm',
+        'linux-appimage-x86_64': 'linux-x86_64.AppImage', 'linux-appimage-aarch64': 'linux-aarch64.AppImage',
+    }.items():
+        status, headers, _ = get('/fawaly/download/' + slug)
+        assert status == 302 and headers.get('Location') == desktop + name, (slug, status, headers.get('Location'))
+        print('PASS', slug, 'release redirect')
+    status, _, _ = get('/fawaly/download/not-a-platform')
+    assert status == 404, status
+    print('PASS unknown platform')
 
     status, headers, body = get('/fawaly-assets/showcase-poster.jpg')
     assert status == 200 and 'image/jpeg' in headers.get('Content-Type', '') and body[:2] == b'\xff\xd8'

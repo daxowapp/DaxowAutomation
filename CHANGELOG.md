@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-11-09] - Sudo Interns 0.7.1 for Mac and the Windows and Linux preview
+
+- Pointed the Mac download at the notarized 0.7.1 ZIP.
+- Added English and Arabic download links for the unsigned Windows and Linux 0.7.0 preview, with what users should expect.
+
 ## [2026-11-09] - Sudo Interns (Fawaly) brand and 0.7.0 preview
 
 - Updated the English and Arabic product copy, explained both names with credit to Ahmed Nagdy, and added current release highlights for Skills, Developer Daily, OpenRouter, and setup.
