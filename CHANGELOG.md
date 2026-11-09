@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-11-09] - Sudo Interns (Fawaly) brand and 0.7.0 preview
+
+- Updated the English and Arabic product copy, explained both names with credit to Ahmed Nagdy, and added current release highlights for Skills, Developer Daily, OpenRouter, and setup.
+
 ## [2026-11-09] - Fawaly direct Mac download
 
 - Added English and Arabic download buttons for the notarized Sudo Interns 0.7.0 ZIP.
