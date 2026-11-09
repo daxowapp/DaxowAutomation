@@ -19,6 +19,6 @@ export default function FawalyLayout({ children }) {
       <nav aria-label="Fawaly"><Link href="/fawaly#showcase">Watch the tour</Link><Link href="/fawaly/support">Setup & support</Link><Link href="/fawaly/privacy">Privacy</Link><Link href="/">Daxow ↗</Link></nav>
     </header>
     <main id="fawaly-main">{children}</main>
-    <footer className="fw-footer"><p>© 2026 Daxow Automation · Fawaly for macOS 14+ · Coming soon to the Mac App Store</p><div><Link href="/fawaly/support">Support</Link><Link href="/fawaly/privacy">Privacy</Link><a href="mailto:support@daxow.com?subject=Fawaly%20support">support@daxow.com</a></div><p>Windows & Linux: upcoming. Original idea and name by <a href="https://nagdy.me/">Ahmed Nagdy</a>. Native Mac app developed by Daxow.</p><p>Independent software. Not affiliated with Anthropic, OpenAI or model providers.</p></footer>
+    <footer className="fw-footer"><p>© 2026 Daxow Automation · Fawaly for macOS 14+</p><div><a href="/fawaly/download">Download for Mac</a><Link href="/fawaly/support">Support</Link><Link href="/fawaly/privacy">Privacy</Link><a href="mailto:support@daxow.com?subject=Fawaly%20support">support@daxow.com</a></div><p>Windows & Linux: upcoming. Original idea and name by <a href="https://nagdy.me/">Ahmed Nagdy</a>. Native Mac app developed by Daxow.</p><p>Independent software. Not affiliated with Anthropic, OpenAI or model providers.</p></footer>
   </div>;
 }

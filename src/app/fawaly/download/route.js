@@ -1,5 +1,5 @@
-// Downloads are paused until the Mac App Store release; old links land on the product page.
-// Relative Location: behind the host's proxy, request.url resolves to the internal localhost address.
+const macRelease = 'https://github.com/daxowapp/fawaly/releases/download/v0.7.0/Sudo-Interns-0.7.0.zip';
+
 export function GET() {
-  return new Response(null, { status: 302, headers: { Location: '/fawaly' } });
+  return Response.redirect(macRelease, 302);
 }

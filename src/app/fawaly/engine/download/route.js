@@ -1,5 +1,4 @@
-// Downloads are paused until the Mac App Store release; old links land on the product page.
-// Relative Location: behind the host's proxy, request.url resolves to the internal localhost address.
+// The direct Mac release contains the execution engine.
 export function GET() {
-  return new Response(null, { status: 302, headers: { Location: '/fawaly' } });
+  return new Response(null, { status: 302, headers: { Location: '/fawaly/download' } });
 }
