@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2026-11-09] - Fawaly direct Mac download
+
+- Added English and Arabic download buttons for the notarized Sudo Interns 0.7.0 ZIP.
+- Updated installation and privacy information for the direct Mac edition.
+
 ## [2026-10-31] - Fawaly 0.4.0 Advisor
 ### Added
 - An English/Arabic Advisor section on the Fawaly page: a read-only second opinion for the primary agent, its three modes (Off, Only when I ask, Important decisions), bounded rounds and recorded decisions.

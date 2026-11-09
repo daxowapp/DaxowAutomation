@@ -48,8 +48,7 @@ def verify(base):
         assert 'text/html' in headers.get('Content-Type', ''), path
         html = body.decode('utf-8')
         page = Page(html)
-        assert not any(link in ['/fawaly/download', '/fawaly/engine/download'] for link in page.links), path
-        assert 'Coming soon' in html or 'coming soon' in html, path
+        assert '/fawaly/download' in page.links, path
         if path == '/':
             assert '/fawaly#showcase' in page.links and 'Your crew implements.' in html
         if path == '/fawaly':
@@ -63,10 +62,14 @@ def verify(base):
         assert 'Open Fawaly Engine' not in html and 'افتح Fawaly Engine' not in html, path
         print('PASS', path)
 
-    for path in ['/fawaly/download', '/fawaly/engine/download']:
+    downloads = {
+        '/fawaly/download': 'https://github.com/daxowapp/fawaly/releases/download/v0.7.0/Sudo-Interns-0.7.0.zip',
+        '/fawaly/engine/download': '/fawaly/download',
+    }
+    for path, target in downloads.items():
         status, headers, _ = get(path)
-        assert status == 302 and headers.get('Location') == '/fawaly', (path, status, headers.get('Location'))
-        print('PASS', path, 'relative redirect')
+        assert status == 302 and headers.get('Location') == target, (path, status, headers.get('Location'))
+        print('PASS', path, 'release redirect')
 
     status, headers, body = get('/fawaly-assets/showcase-poster.jpg')
     assert status == 200 and 'image/jpeg' in headers.get('Content-Type', '') and body[:2] == b'\xff\xd8'
