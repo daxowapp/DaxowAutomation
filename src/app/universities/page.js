@@ -14,7 +14,7 @@ export default function UniversitiesPage() {
       
       <header className="page-header">
         <div className="container">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+          <motion.div initial={false} animate={{ opacity: 1, y: 0 }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'var(--gradient-glow)', padding: '0.5rem 1rem', borderRadius: '100px', fontSize: '0.875rem', fontWeight: 600, color: 'var(--accent-blue)', marginBottom: '1.5rem', border: '1px solid var(--glass-border)' }}>
               <BookOpen size={16} /> Daxow for Higher Education
             </div>

@@ -13,7 +13,7 @@ export default function ContactPage() {
       
       <header className="page-header">
         <div className="container">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+          <motion.div initial={false} animate={{ opacity: 1, y: 0 }}>
             <h1>Let's Automate <span className="gradient-text">Together</span></h1>
             <p>
               Ready to see Daxow in action? Reach out to our team to schedule a custom demo tailored to your workflows.
@@ -28,7 +28,7 @@ export default function ContactPage() {
             
             {/* Contact Form */}
             <motion.div 
-              initial={{ opacity: 0, x: -30 }}
+              initial={false}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               id="contact-form"
@@ -42,7 +42,7 @@ export default function ContactPage() {
 
             {/* Contact Info */}
             <motion.div 
-              initial={{ opacity: 0, x: 30 }}
+              initial={false}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               style={{ padding: '2rem' }}

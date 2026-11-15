@@ -1,5 +1,14 @@
 # Changelog
 
+## 2026-11-15 - Progressive rendering, font loading and motion preferences
+
+- Self-host Outfit and Inter with next/font instead of a browser CSS import from Google Fonts; preserve the current palette and typefaces.
+- Render static marketing content visibly in server HTML instead of opacity-zero entrance states. Interactive FAQ/status transitions are retained.
+- Set Framer Motion reducedMotion=user across routes; honor reduced motion for smooth scrolling, the hero glow and button lift.
+- Add mobile form text sizing and forced-colors focus/gradient-text fallbacks.
+- Document the modern web review in docs/MODERN-WEB-GUIDANCE.md.
+
+
 All notable changes to this project will be documented in this file.
 
 ## [2026-11-09] - Sudo Interns 0.7.1 for Mac and the Windows and Linux preview
@@ -122,3 +131,5 @@ All notable changes to this project will be documented in this file.
 - Added Framer Motion and Lucide React.
 - Set up AGENTS.md for global rules and architecture.
 - Created premium dark mode UI with Vanilla CSS (`globals.css`).
+
+The integration marquee now has a keyboard-accessible pause/play control and a scrollable fallback. Reduced motion displays a static list, and duplicated marquee labels are hidden from assistive technology. Decorative glow/rotation effects finish within four seconds.

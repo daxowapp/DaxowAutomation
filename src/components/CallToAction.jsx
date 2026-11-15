@@ -9,7 +9,7 @@ export default function CallToAction() {
     <section className="section" style={{ padding: '0 2rem' }}>
       <motion.div 
         className="container"
-        initial={{ opacity: 0, scale: 0.95 }}
+        initial={false}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}

@@ -14,7 +14,7 @@ export default function CaseStudiesPage() {
       
       <header className="page-header">
         <div className="container">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+          <motion.div initial={false} animate={{ opacity: 1, y: 0 }}>
             <h1>Client <span className="gradient-text">Success</span> Stories</h1>
             <p>
               Discover how leading universities and global enterprises are using Daxow to reduce operational costs by up to 80% and scale their impact without scaling their headcount.

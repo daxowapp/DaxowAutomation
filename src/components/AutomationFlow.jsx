@@ -31,7 +31,7 @@ export default function AutomationFlow() {
           <motion.div 
             className="flow-container"
             variants={containerVariants}
-            initial="hidden"
+            initial={false}
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             style={{ display: 'flex', flexDirection: 'column', gap: '3rem', position: 'relative' }}
@@ -53,7 +53,7 @@ export default function AutomationFlow() {
               <div style={{ flex: 1, padding: '2rem', background: 'var(--gradient-glow)', borderRadius: '16px', border: '1px solid rgba(37, 99, 235, 0.2)', position: 'relative' }}>
                 <motion.div 
                   animate={{ rotate: 360 }} 
-                  transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
+                  transition={{ repeat: 0, duration: 4, ease: "linear" }}
                   style={{ position: 'absolute', right: '2rem', top: '2rem', opacity: 0.1 }}
                 >
                   <Network size={100} color="var(--accent-blue)" />
