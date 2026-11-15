@@ -81,7 +81,7 @@ export default function AutomationDeepDive() {
           {steps.map((step, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, x: 40 }}
+              initial={false}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: idx * 0.1 }}

@@ -11,7 +11,7 @@ export default function Hero() {
       <div className="container">
         <div className="hero-content">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
@@ -33,7 +33,7 @@ export default function Hero() {
           
           <motion.h1 
             className="hero-title"
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
           >
@@ -42,7 +42,7 @@ export default function Hero() {
           
           <motion.p 
             className="hero-subtitle"
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
@@ -51,7 +51,7 @@ export default function Hero() {
           
           <motion.div 
             className="hero-buttons"
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
           >

@@ -1,4 +1,12 @@
 import './globals.css';
+import { Outfit, Inter } from 'next/font/google';
+import MotionPreferences from '@/components/MotionPreferences';
+
+const outfit = Outfit({ subsets: ['latin'], display: 'swap', variable: '--font-outfit' });
+const inter = Inter({ subsets: ['latin'], display: 'swap', variable: '--font-inter' });
+
+export const viewport = { colorScheme: 'light' };
+
 
 export const metadata = {
   title: 'Daxow Automation | AI Solutions for Universities & Enterprises',
@@ -13,8 +21,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" style={{ scrollBehavior: 'smooth' }}>
-      <body>{children}</body>
+    <html lang="en" className={`${outfit.variable} ${inter.variable}`}>
+      <body><MotionPreferences>{children}</MotionPreferences></body>
     </html>
   );
 }

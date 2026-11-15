@@ -64,7 +64,7 @@ export default function CaseStudiesExpanded() {
           {filteredData.map((study, idx) => (
             <motion.div 
               key={study.id}
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: (idx % 6) * 0.1 }}
               style={{ 

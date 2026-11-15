@@ -24,7 +24,7 @@ export default function ValueProposition() {
 
         <motion.div 
           className="glass-panel"
-          initial={{ opacity: 0, y: 40 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}

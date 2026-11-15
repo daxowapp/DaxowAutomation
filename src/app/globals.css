@@ -1,6 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
-
 :root {
+  color-scheme: light;
   --bg-primary: #ffffff;
   --bg-secondary: #f8f9fa;
   --bg-tertiary: rgba(0, 0, 0, 0.03);
@@ -20,8 +19,8 @@
   --glass-border: rgba(0, 0, 0, 0.08);
   --glass-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: var(--font-outfit), 'Outfit', sans-serif;
+  --font-body: var(--font-inter), 'Inter', sans-serif;
 }
 
 * {
@@ -189,7 +188,7 @@ html {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: pulse-glow 8s infinite ease-in-out;
+  animation: pulse-glow 4s 1 ease-in-out;
   z-index: -1;
 }
 
@@ -757,3 +756,24 @@ a.contact-card:hover {
   .hero-buttons > a,
   .hero-buttons > div > a { width: 100%; justify-content: center; }
 }
+
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-bg-glow { animation: none; }
+  .btn-primary { transition: box-shadow 0.3s ease; }
+  .btn-primary:hover { transform: none; }
+}
+@media (max-width: 767px) {
+  .form-field :is(input, select, textarea) { font-size: max(16px, 1em); }
+}
+@media (forced-colors: active) {
+  :is(a, button, input, select, textarea, summary):focus-visible {
+    outline: 2px solid Highlight;
+    outline-offset: 3px;
+  }
+  .gradient-text { background: none; -webkit-text-fill-color: currentColor; }
+}
+
+.integration-pause { display: flex; margin: 0 auto 1.5rem; }
+.integration-viewport:focus-visible { outline: 2px solid var(--accent-blue); outline-offset: -3px; }

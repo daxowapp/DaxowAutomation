@@ -38,7 +38,7 @@ export default function UniversityFocus() {
       <div className="container">
         <div className="grid-2">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={false}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -72,7 +72,7 @@ export default function UniversityFocus() {
                 key={idx}
                 className="glass-panel"
                 style={{ padding: '2rem' }}
-                initial={{ opacity: 0, x: 50 }}
+                initial={false}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: idx * 0.15 }}

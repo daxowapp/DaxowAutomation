@@ -12,7 +12,7 @@ export default function AboutPage() {
       
       <header className="page-header">
         <div className="container">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+          <motion.div initial={false} animate={{ opacity: 1, y: 0 }}>
             <h1>Building the <span className="gradient-text">Future of Work</span></h1>
             <p>
               Daxow was founded with a singular mission: to eliminate the mundane, repetitive tasks that drain human potential and corporate resources.

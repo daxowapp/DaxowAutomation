@@ -54,7 +54,7 @@ export default function AIWebsiteDevelopmentPage() {
       <header className="page-header" style={{ position: 'relative', overflow: 'hidden' }}>
         <div className="hero-bg-glow"></div>
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+          <motion.div initial={false} animate={{ opacity: 1, y: 0 }}>
             <div className="service-badge">
               <Sparkles size={16} /> New Service · AI Website Development
             </div>
@@ -169,7 +169,7 @@ export default function AIWebsiteDevelopmentPage() {
             <motion.div
               className="glass-panel"
               style={{ padding: '3rem', textAlign: 'center', position: 'relative', overflow: 'hidden' }}
-              initial={{ opacity: 0, scale: 0.95 }}
+              initial={false}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}

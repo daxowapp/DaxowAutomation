@@ -28,7 +28,7 @@ export default function MetricsDashboard() {
                 <motion.div 
                   key={i}
                   style={{ background: 'white', padding: '1.5rem', borderRadius: '16px', border: '1px solid var(--glass-border)' }}
-                  initial={{ opacity: 0, scale: 0.9 }}
+                  initial={false}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
@@ -46,7 +46,7 @@ export default function MetricsDashboard() {
           </div>
           
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={false}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
@@ -69,7 +69,7 @@ export default function MetricsDashboard() {
                   <motion.div 
                     key={i}
                     style={{ flex: 1, background: 'var(--gradient-primary)', borderRadius: '8px 8px 0 0' }}
-                    initial={{ height: 0 }}
+                    initial={false}
                     whileInView={{ height: `${height}%` }}
                     viewport={{ once: true }}
                     transition={{ duration: 1, delay: i * 0.1, ease: 'easeOut' }}

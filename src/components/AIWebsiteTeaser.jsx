@@ -17,7 +17,7 @@ export default function AIWebsiteTeaser() {
       <div className="container">
         <motion.div
           className="ai-web-teaser"
-          initial={{ opacity: 0, y: 40 }}
+          initial={false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
@@ -54,7 +54,7 @@ export default function AIWebsiteTeaser() {
               <motion.div
                 key={h.label}
                 className="ai-web-chip"
-                initial={{ opacity: 0, x: 30 }}
+                initial={false}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 + i * 0.1 }}
